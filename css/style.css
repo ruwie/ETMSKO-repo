@@ -1,0 +1,17 @@
+body {
+    background-color: #222831;
+    padding: 0px;
+    margin: 0px;
+}
+#home-page {
+    background-color: #76ABAE;
+    /* margin-top: 25vh; */
+    margin: auto;
+    margin-top: 25vh;
+    padding-left: 50px;
+    padding-right: 25px;
+    height: 25vh;
+    width: 50vw;
+    padding-top: 20px;
+
+}

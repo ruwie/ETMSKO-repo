@@ -16,6 +16,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    Hello world!
+    <!-- Header starts here -->
+    <div class="row">
+        <div class="col-md-4" id="home-page">
+            <center><h3 class="text-white">Choose login role</h3></center>
+            <br>
+            <a href="" class="btn btn-warning">User login</a>
+            <a href="" class="btn btn-success">User registration</a>
+            <a href="" class="btn btn-primary">Admin login</a>
+        </div>
+    </div>
 </body>
 </html>
