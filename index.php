@@ -9,8 +9,11 @@
     <script src="includes/jquery-3.7.1.min.js"></script>
 
     <!-- Bootstrap file -->
-    <script src="bootstrap/bootstrap.min.css"></script>
-    <script src="bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.js">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     Hello world!
