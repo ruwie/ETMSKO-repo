@@ -1,3 +1,24 @@
+<?php
+    include('includes/connection.php');
+    if(isset($_POST['userLogin'])){
+        $query = "SELECT email,password,name,uid FROM users WHERE email = '$_POST[email]' AND password = '$_POST[password]'";
+
+        $query_run = mysqli_query($connection, $query);
+
+        if(mysqli_num_rows($query_run)){
+            echo "<script type='text/javascript'>                    
+                    window.location.href = 'user_dashboard.php';
+                </script>";
+
+        }else{
+            echo "<script type='text/javascript'>
+                    alert('Wrong Credentials!');
+                    window.location.href = 'user_login.php';
+                </script>";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +41,7 @@
     <div class="row">
         <div class="col-md-3" id="login-home-page">
             <center><h3 style="margin-bottom: 20px;">User login</h3></center>
-            <form action="post">
+            <form action="" method="post">
                 <div class="form-group">
                     <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
                 </div>

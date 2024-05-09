@@ -1,22 +1,21 @@
+
 <?php
     include('includes/connection.php');
     if(isset($_POST['userRegistration'])){
-        $query = "INSERT INTO users values(null, '$_POST[name]','$_POST[email]','$_POST[password]',$_POST[mobile])";
+        $query = "INSERT INTO users VALUES(null, '$_POST[name]', '$_POST[email]', '$_POST[password]', $_POST[mobile] )";
+        $query_run = mysqli_query($connection, $query);
 
-        $query_run = mysqli_query($connection,$query);
         if($query_run){
             echo "<script type='text/javascript'>
-            alert('User registered successfully!');
-            window.location.href = 'index.php';
-            </script>";
-        }
-        else{
+                    alert('User Registered Successfully!');
+                    window.location.href = 'index.php';
+                </script>";
+        }else{
             echo "<script type='text/javascript'>
-            alert('Error! Please try again!');
-            window.location.href = 'registration.php';
-            </script>";
+                    alert('Error! Please try again!');
+                    window.location.href = 'registration.php';
+                </script>";
         }
-        
     }
 ?>
 
@@ -25,7 +24,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETMSKO | User Registration page</    title>
+    <title>ETMSKO | User Registration page</title>
 
     <!-- JQUERY file -->
     <script src="includes/jquery-3.7.1.min.js"></script>
@@ -42,7 +41,7 @@
     <div class="row">
         <div class="col-md-3" id="register-home-page">
             <center><h3 style="margin-bottom: 20px;">User registration</h3></center>
-            <form action="" method="POST">
+            <form action="" method="post">
                 <div class="form-group">
                     <input type="name" name="name" class="form-control" placeholder="Enter Name" required>
                 </div>
@@ -56,7 +55,7 @@
                 </div>
                 <br>
                 <div class="form-group">
-                    <input type="text" name="mobile" class="form-control" placeholder="Enter Mobile No." required>
+                    <input type="number" name="mobile" class="form-control" placeholder="Enter Mobile No." required>
                 </div>
                 <br>
                 <div class="form-group">
