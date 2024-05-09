@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETMSKO | User login</title>
+    <title>ETMSKO | User login page</title>
 
     <!-- JQUERY file -->
     <script src="includes/jquery-3.7.1.min.js"></script>

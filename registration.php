@@ -1,9 +1,31 @@
+<?php
+    include('includes/connection.php');
+    if(isset($_POST['userRegistration'])){
+        $query = "INSERT INTO users values(null, '$_POST[name]','$_POST[email]','$_POST[password]',$_POST[mobile])";
+
+        $query_run = mysqli_query($connection,$query);
+        if($query_run){
+            echo "<script type='text/javascript'>
+            alert('User registered successfully!');
+            window.location.href = 'index.php';
+            </script>";
+        }
+        else{
+            echo "<script type='text/javascript'>
+            alert('Error! Please try again!');
+            window.location.href = 'registration.php';
+            </script>";
+        }
+        
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETMSKO | User Registration login</title>
+    <title>ETMSKO | User Registration page</    title>
 
     <!-- JQUERY file -->
     <script src="includes/jquery-3.7.1.min.js"></script>
@@ -20,7 +42,7 @@
     <div class="row">
         <div class="col-md-3" id="register-home-page">
             <center><h3 style="margin-bottom: 20px;">User registration</h3></center>
-            <form action="post">
+            <form action="" method="POST">
                 <div class="form-group">
                     <input type="name" name="name" class="form-control" placeholder="Enter Name" required>
                 </div>
