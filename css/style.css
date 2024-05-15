@@ -43,4 +43,35 @@ body {
     padding-bottom: 5px;
     padding-left: 50px;
 }
+#logout_link{
+    text-decoration: none;
+    color: white;
+
+}
+#left-sidebar{
+    margin-top: 50px;
+    width: 28vh;
+    height: 30vh;
+    display: inline-block;
+}
+#left-sidebar table tr{
+    background-color: #F9B208;
+    color: white;
+    font-size: tomato;
+}
+#left-sidebar table tr:hover{
+    background-color: #FC5404;
+    font-size: 20px;
+}
+#logout_link{
+    text-decoration: none;
+    color: white;
+}
+#logout_link:hover{
+    background-color: #FC5404;
+    color: #222831;
+}
+#link{
+    color: white;
+}
 
