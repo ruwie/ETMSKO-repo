@@ -60,8 +60,14 @@
                 </tr>
             </table>
         </div>
-        <div class="col-md-10" id="right-sidebar">
-
+        <div id="right-sidebar" class="col-md-10" style="color: white;">
+            <h4>Instructions for Employees</h4>
+            <ul>
+                <li>1. All the Employee should mark their attendanca.</li>
+                <li>Everyone must complete the task assigned to them.</li>
+                <li>Kindly maintain decorum of the office.</li>
+                <li>Keep office and your area neat and clean.</li>
+            </ul>
         </div>
 
     </div>
